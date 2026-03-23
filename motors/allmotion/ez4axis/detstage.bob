@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>930</width>
+  <height>843</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <file>ez4.opi</file>
+    <macros>
+      <AX1>1</AX1>
+      <AX2>2</AX2>
+      <AX3>3</AX3>
+      <AX4>4</AX4>
+      <P>DetStage</P>
+      <Q>EZ4:1</Q>
+    </macros>
+    <x>31</x>
+    <y>25</y>
+    <width>888</width>
+    <height>359</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <file>ez4.opi</file>
+    <macros>
+      <AX1>1</AX1>
+      <AX2>2</AX2>
+      <AX3>3</AX3>
+      <AX4>4</AX4>
+      <P>DetStage</P>
+      <Q>EZ4:2</Q>
+    </macros>
+    <x>31</x>
+    <y>409</y>
+    <width>888</width>
+    <height>345</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+</display>

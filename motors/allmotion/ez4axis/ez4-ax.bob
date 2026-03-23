@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>850</width>
+  <height>37</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P){$(Q)-Ax:$(AX)}Pos-RB</pv_name>
+    <x>355</x>
+    <y>7</y>
+    <width>148</width>
+    <height>23</height>
+    <precision>8</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input_3</name>
+    <pv_name>$(P){$(Q)-Ax:$(AX)}Pos-SP</pv_name>
+    <x>198</x>
+    <y>6</y>
+    <width>150</width>
+    <height>25</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <precision>8</precision>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P){$(Q)-Ax:$(AX)}Pos-SP.DESC</pv_name>
+    <x>6</x>
+    <y>6</y>
+    <width>181</width>
+    <height>25</height>
+    <precision>8</precision>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P){$(Q)-Ax:$(AX)}Stop.PROC</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>STOP</text>
+    <x>702</x>
+    <y>6</y>
+    <width>60</width>
+    <height>25</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>ez4-ax-detail.opi</file>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>MORE</text>
+    <x>780</x>
+    <y>6</y>
+    <width>60</width>
+    <height>25</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>$(P){$(Q)-Ax:$(AX)}TWV-SP</pv_name>
+    <x>534</x>
+    <y>6</y>
+    <width>120</width>
+    <height>25</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <precision>8</precision>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P){$(Q)-Ax:$(AX)}TWF.PROC</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>&gt;</text>
+    <x>654</x>
+    <y>6</y>
+    <width>25</width>
+    <height>25</height>
+    <font>
+      <font family="Ubuntu" style="REGULAR" size="18.81188118811881">
+      </font>
+    </font>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P){$(Q)-Ax:$(AX)}TWR.PROC</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>&lt;</text>
+    <x>510</x>
+    <y>6</y>
+    <width>25</width>
+    <height>25</height>
+    <font>
+      <font family="Ubuntu" style="REGULAR" size="18.81188118811881">
+      </font>
+    </font>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

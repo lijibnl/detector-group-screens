@@ -1,0 +1,5 @@
+All IOCs are located in /epics/iocs.
+
+- EZ4Axis: /epics/iocs/det4axis
+
+Run ./st.cmd in the IOC directory to start the IOC.

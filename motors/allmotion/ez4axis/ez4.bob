@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>890</width>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <file>ez4-ax.opi</file>
+    <macros>
+      <AX>$(AX1)</AX>
+    </macros>
+    <x>31</x>
+    <y>82</y>
+    <width>851</width>
+    <height>38</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <file>ez4-ax.opi</file>
+    <macros>
+      <AX>$(AX2)</AX>
+    </macros>
+    <x>31</x>
+    <y>132</y>
+    <width>848</width>
+    <height>38</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <file>ez4-ax.opi</file>
+    <macros>
+      <AX>$(AX3)</AX>
+    </macros>
+    <x>31</x>
+    <y>182</y>
+    <width>848</width>
+    <height>38</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <file>ez4-ax.opi</file>
+    <macros>
+      <AX>$(AX4)</AX>
+    </macros>
+    <x>31</x>
+    <y>232</y>
+    <width>848</width>
+    <height>38</height>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(P){$(Q)}</text>
+    <x>270</x>
+    <y>18</y>
+    <width>325</width>
+    <height>45</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>ez4-ext.opi</file>
+        <target>replace</target>
+      </action>
+    </actions>
+    <text>Save &amp; Load</text>
+    <x>744</x>
+    <y>21</y>
+    <width>115</width>
+    <height>40</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Menu Button</name>
+    <pv_name>$(P){$(Q)}Status-RAW.SCAN</pv_name>
+    <x>48</x>
+    <y>21</y>
+    <height>40</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P){$(Q)-Ax:$(AX)}StopAll.PROC</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>STOP ALL</text>
+    <x>744</x>
+    <y>295</y>
+    <width>115</width>
+    <height>40</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>../asyn/asynRecord.opi</file>
+        <macros>
+          <P>$(P){$(Q)}</P>
+          <R>Asyn</R>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>asyn</text>
+    <x>48</x>
+    <y>295</y>
+    <width>115</width>
+    <height>40</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P){$(Q)}PosSave-Enable</pv_name>
+    <x>710</x>
+    <y>33</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P){$(Q)}Status</pv_name>
+    <x>436</x>
+    <y>301</y>
+    <width>155</width>
+    <height>28</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Font color Rule" prop_id="foreground_color" out_exp="false">
+        <exp bool_exp="(pv0!=1)&amp;&amp;(pv0!=0)">
+          <value>
+            <color name="Major" red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==1)||(pv0==0)">
+          <value>
+            <color red="78" green="154" blue="6">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P){$(Q)}Status</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Status</text>
+    <x>348</x>
+    <y>300</y>
+    <width>46</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(P){$(Q)}Status-RAW</pv_name>
+    <x>393</x>
+    <y>300</y>
+    <width>37</width>
+    <height>30</height>
+    <transparent>true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>[       ]</text>
+    <x>393</x>
+    <y>300</y>
+    <width>37</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

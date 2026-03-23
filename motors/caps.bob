@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>CAPS Motors</name>
+  <width>857</width>
+  <height>266</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <text>Mtr Motors</text>
+    <x>15</x>
+    <y>10</y>
+    <width>815</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>[Mtr1 - Mtr2]</name>
+    <macros>
+      <CntlAxis>1</CntlAxis>
+      <CntlDev>Mtr:$(CntlDevNum)</CntlDev>
+      <CntlSys>Det-CT</CntlSys>
+      <Dev>{Mtr-$(Ax)}</Dev>
+      <Mtr>Mtr</Mtr>
+      <Sys>Det</Sys>
+    </macros>
+    <x>15</x>
+    <y>60</y>
+    <width>827</width>
+    <height>110</height>
+    <style>1</style>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <widget type="group" version="2.0.0">
+      <name>axis1_2</name>
+      <macros>
+        <Ax>X</Ax>
+        <CntlDevNum>1</CntlDevNum>
+      </macros>
+      <x>5</x>
+      <y>11</y>
+      <width>815</width>
+      <height>26</height>
+      <style>2</style>
+      <foreground_color>
+        <color red="128" green="128" blue="128">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <widget type="led" version="2.0.0">
+        <name>Motor Moving_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).MOVN</pv_name>
+        <x>207</x>
+        <y>2</y>
+        <width>16</width>
+        <square>true</square>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Position_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).VAL</pv_name>
+        <x>225</x>
+        <y>2</y>
+        <width>115</width>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>Negative Limit_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).LLS</pv_name>
+        <x>344</x>
+        <y>2</y>
+        <width>16</width>
+        <off_color>
+          <color red="128" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </on_color>
+        <square>true</square>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Position RBV_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).RBV</pv_name>
+        <x>360</x>
+        <y>2</y>
+        <width>115</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>Positive Limit_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).HLS</pv_name>
+        <x>477</x>
+        <y>2</y>
+        <width>16</width>
+        <off_color>
+          <color red="128" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </on_color>
+        <square>true</square>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Tweak Reverse_2</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).TWR</pv_name>
+            <value>1</value>
+            <description>Tweak Reerse</description>
+          </action>
+        </actions>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWR</pv_name>
+        <text>&lt;</text>
+        <x>497</x>
+        <y>2</y>
+        <width>24</width>
+        <height>20</height>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Tweak Value_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWV</pv_name>
+        <x>521</x>
+        <y>2</y>
+        <width>115</width>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Tweak Forward_2</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).TWF</pv_name>
+            <value>1</value>
+            <description>Tweak Forward</description>
+          </action>
+        </actions>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWF</pv_name>
+        <text>&gt;</text>
+        <x>636</x>
+        <y>2</y>
+        <width>24</width>
+        <height>20</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Stop Motor_2</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).STOP</pv_name>
+            <value>1</value>
+            <description>Write PV</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).STOP</pv_name>
+            <value>0</value>
+            <description>Write PV</description>
+          </action>
+        </actions>
+        <text>Stop</text>
+        <x>665</x>
+        <y>2</y>
+        <width>70</width>
+        <height>20</height>
+        <foreground_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>More Options_2</name>
+        <actions>
+          <action type="open_display">
+            <file>../../common/motor/motor_all.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+            </macros>
+            <target>tab</target>
+            <description>Motor Config</description>
+          </action>
+          <action type="open_display">
+            <file>../../common/motor/mdriveDetail.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+            </macros>
+            <target>tab</target>
+            <description>MDrive Detail</description>
+          </action>
+          <action type="open_display">
+            <file>../../adl/asynRecord.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+              <P>$(CntlSys)</P>
+              <R>{$(CntlDev)}Asyn</R>
+            </macros>
+            <target>tab</target>
+            <description>Asyn</description>
+          </action>
+        </actions>
+        <text>More</text>
+        <x>740</x>
+        <y>2</y>
+        <width>70</width>
+        <height>20</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Description_2</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).DESC</pv_name>
+        <y>2</y>
+        <width>200</width>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>axis1_3</name>
+      <macros>
+        <Ax>Y</Ax>
+        <CntlDevNum>2</CntlDevNum>
+      </macros>
+      <x>5</x>
+      <y>50</y>
+      <width>815</width>
+      <height>26</height>
+      <style>2</style>
+      <foreground_color>
+        <color red="128" green="128" blue="128">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <widget type="led" version="2.0.0">
+        <name>Motor Moving_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).MOVN</pv_name>
+        <x>207</x>
+        <y>2</y>
+        <width>16</width>
+        <square>true</square>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Position_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).VAL</pv_name>
+        <x>225</x>
+        <y>2</y>
+        <width>115</width>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>Negative Limit_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).LLS</pv_name>
+        <x>344</x>
+        <y>2</y>
+        <width>16</width>
+        <off_color>
+          <color red="128" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </on_color>
+        <square>true</square>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Position RBV_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).RBV</pv_name>
+        <x>360</x>
+        <y>2</y>
+        <width>115</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>Positive Limit_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).HLS</pv_name>
+        <x>477</x>
+        <y>2</y>
+        <width>16</width>
+        <off_color>
+          <color red="128" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </on_color>
+        <square>true</square>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Tweak Reverse_3</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).TWR</pv_name>
+            <value>1</value>
+            <description>Tweak Reerse</description>
+          </action>
+        </actions>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWR</pv_name>
+        <text>&lt;</text>
+        <x>497</x>
+        <y>2</y>
+        <width>24</width>
+        <height>20</height>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Tweak Value_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWV</pv_name>
+        <x>521</x>
+        <y>2</y>
+        <width>115</width>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Tweak Forward_3</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).TWF</pv_name>
+            <value>1</value>
+            <description>Tweak Forward</description>
+          </action>
+        </actions>
+        <pv_name>$(Sys)$(Dev)$(Mtr).TWF</pv_name>
+        <text>&gt;</text>
+        <x>636</x>
+        <y>2</y>
+        <width>24</width>
+        <height>20</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Stop Motor_3</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).STOP</pv_name>
+            <value>1</value>
+            <description>Write PV</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>$(Sys)$(Dev)$(Mtr).STOP</pv_name>
+            <value>0</value>
+            <description>Write PV</description>
+          </action>
+        </actions>
+        <text>Stop</text>
+        <x>665</x>
+        <y>2</y>
+        <width>70</width>
+        <height>20</height>
+        <foreground_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>More Options_3</name>
+        <actions>
+          <action type="open_display">
+            <file>../../common/motor/motor_all.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+            </macros>
+            <target>tab</target>
+            <description>Motor Config</description>
+          </action>
+          <action type="open_display">
+            <file>../../common/motor/mdriveDetail.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+            </macros>
+            <target>tab</target>
+            <description>MDrive Detail</description>
+          </action>
+          <action type="open_display">
+            <file>../../adl/asynRecord.bob</file>
+            <macros>
+              <NAME>MDrive:1</NAME>
+              <P>$(CntlSys)</P>
+              <R>{$(CntlDev)}Asyn</R>
+            </macros>
+            <target>tab</target>
+            <description>Asyn</description>
+          </action>
+        </actions>
+        <text>More</text>
+        <x>740</x>
+        <y>2</y>
+        <width>70</width>
+        <height>20</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Description_3</name>
+        <pv_name>$(Sys)$(Dev)$(Mtr).DESC</pv_name>
+        <y>2</y>
+        <width>200</width>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+</display>
