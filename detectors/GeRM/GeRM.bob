@@ -415,7 +415,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_36</name>
-            <pv_name>$(Sys)$(Dev)RUNNO_RBV</pv_name>
+            <pv_name>$(Sys)$(Dev)RunNumber_RBV</pv_name>
             <x>1084</x>
             <y>564</y>
             <width>110</width>
@@ -457,7 +457,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_6</name>
-            <pv_name>$(Sys)$(Dev)RUNNO</pv_name>
+            <pv_name>$(Sys)$(Dev)RunNumber</pv_name>
             <x>1084</x>
             <y>539</y>
             <width>110</width>
@@ -492,7 +492,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Auto time_2</name>
-            <pv_name>$(Sys)$(Dev)TP1</pv_name>
+            <pv_name>$(Sys)$(Dev)AcquireTime1</pv_name>
             <x>1084</x>
             <y>499</y>
             <width>110</width>
@@ -511,7 +511,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="progressbar" version="2.0.0">
             <name>Couting Progress</name>
-            <pv_name>$(Sys)$(Dev)TIME_ELAPSED</pv_name>
+            <pv_name>$(Sys)$(Dev)ElapsedTime</pv_name>
             <x>989</x>
             <y>448</y>
             <width>200</width>
@@ -528,7 +528,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_33</name>
-            <pv_name>$(Sys)$(Dev)TIME_LEFT</pv_name>
+            <pv_name>$(Sys)$(Dev)ElapsedTime</pv_name>
             <x>1085</x>
             <y>418</y>
             <width>110</width>
@@ -588,7 +588,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="spinner" version="2.0.0">
             <name>Spinner_5</name>
-            <pv_name>$(Sys)$(Dev)MONCH</pv_name>
+            <pv_name>$(Sys)$(Dev)MonitorChannel</pv_name>
             <x>1087</x>
             <y>731</y>
             <width>110</width>
@@ -620,7 +620,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_47</name>
-            <pv_name>='$(Sys)$(Dev)TIME_ELAPSED'/'$(Sys)$(Dev)TP'*100</pv_name>
+            <pv_name>='$(Sys)$(Dev)ElapsedTime'/'$(Sys)$(Dev)AcquireTime'*100</pv_name>
             <x>1058</x>
             <y>457</y>
             <width>40</width>
@@ -804,7 +804,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="array" version="2.0.0">
             <name>Array_6</name>
-            <pv_name>$(Sys)$(Dev)THRSH</pv_name>
+            <pv_name>$(Sys)$(Dev)Threshold</pv_name>
             <x>1059</x>
             <y>419</y>
             <width>130</width>
@@ -870,7 +870,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_11</name>
-              <pv_name>$(Sys)$(Dev)HV</pv_name>
+              <pv_name>$(Sys)$(Dev)HighVoltage</pv_name>
               <x>85</x>
               <y>7</y>
               <width>140</width>
@@ -889,7 +889,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_11</name>
-              <pv_name>$(Sys)$(Dev)HV_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)HighVoltage_RBV</pv_name>
               <x>85</x>
               <y>32</y>
               <width>140</width>
@@ -910,7 +910,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_12</name>
-              <pv_name>$(Sys)$(Dev)HV_CUR</pv_name>
+              <pv_name>$(Sys)$(Dev)HighVoltageCurrent</pv_name>
               <x>85</x>
               <y>63</y>
               <width>140</width>
@@ -1582,7 +1582,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_32</name>
-              <pv_name>$(Sys)$(Dev)FNAM_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)FileName</pv_name>
               <x>131</x>
               <y>82</y>
               <width>540</width>
@@ -2447,7 +2447,6 @@ $(actions)</tooltip>
       <color red="240" green="240" blue="240">
       </color>
     </background_color>
-    <active_tab>2</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -2645,7 +2644,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_45</name>
-      <pv_name>$(Sys)$(Dev)ztmp</pv_name>
+      <pv_name>$(Sys)$(Dev)ZynqTemperature</pv_name>
       <x>422</x>
       <y>65</y>
       <height>25</height>
@@ -2687,7 +2686,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_46</name>
-      <pv_name>$(Sys)$(Dev)HV_RBV</pv_name>
+      <pv_name>$(Sys)$(Dev)HighVoltage_RBV</pv_name>
       <x>551</x>
       <y>65</y>
       <height>25</height>
@@ -2728,7 +2727,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_48</name>
-      <pv_name>$(Sys)$(Dev)HV_CUR</pv_name>
+      <pv_name>$(Sys)$(Dev)HighVoltageCurrent</pv_name>
       <x>671</x>
       <y>65</y>
       <width>120</width>
@@ -2737,7 +2736,7 @@ $(actions)</tooltip>
         <color red="32" green="74" blue="135">
         </color>
       </foreground_color>
-      <horizontal_alignment>2</horizontal_alignment>
+      <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
       <actions>
