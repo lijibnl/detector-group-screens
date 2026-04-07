@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-04-06 15:58:23 by liji-->
 <display version="2.0.0">
   <width>1300</width>
   <height>1150</height>
@@ -325,7 +324,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_11</name>
-            <pv_name>$(Sys)$(Dev)MODE</pv_name>
+            <pv_name>$(Sys)$(Dev)CountMode</pv_name>
             <x>1087</x>
             <y>199</y>
             <width>110</width>
@@ -338,7 +337,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_12</name>
-            <pv_name>$(Sys)$(Dev)CONT</pv_name>
+            <pv_name>$(Sys)$(Dev)ImageMode</pv_name>
             <x>1087</x>
             <y>264</y>
             <width>110</width>
@@ -560,7 +559,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_13</name>
-            <pv_name>$(Sys)$(Dev)GMON</pv_name>
+            <pv_name>$(Sys)$(Dev)MonitorMode</pv_name>
             <x>1087</x>
             <y>673</y>
             <width>110</width>
@@ -708,7 +707,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_1</name>
-            <pv_name>$(Sys)$(Dev)LOAO</pv_name>
+            <pv_name>$(Sys)$(Dev)SimEventSel</pv_name>
             <x>1108</x>
             <y>131</y>
             <height>35</height>
@@ -750,7 +749,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_2</name>
-            <pv_name>$(Sys)$(Dev)EBLK</pv_name>
+            <pv_name>$(Sys)$(Dev)LeakageCurrent</pv_name>
             <x>1108</x>
             <y>176</y>
             <height>35</height>
@@ -1164,75 +1163,89 @@ $(actions)</tooltip>
             <width>340</width>
             <height>210</height>
             <transparent>true</transparent>
-            <widget type="choice" version="2.0.0">
-              <name>Choice Button_2</name>
-              <pv_name>$(Sys)$(Dev)TSEN_CTRL</pv_name>
-              <x>32</x>
-              <y>12</y>
-              <width>120</width>
-              <height>150</height>
-              <background_color>
-                <color red="240" green="240" blue="240">
-                </color>
-              </background_color>
-              <selected_color>
-                <color red="255" green="255" blue="255">
-                </color>
-              </selected_color>
-              <horizontal>false</horizontal>
-              <actions>
-              </actions>
-              <items>
-                <item>Enable</item>
-                <item>Enable All</item>
-                <item>Disable</item>
-                <item>Disable All</item>
-              </items>
-            </widget>
             <widget type="action_button" version="3.0.0">
-              <name>Action Button_13</name>
+              <name>Action Button_19</name>
               <actions>
                 <action type="write_pv">
                   <description>WritePV</description>
-                  <pv_name>$(Sys)$(Dev)TSEN_PROC</pv_name>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
                   <value>1</value>
                 </action>
               </actions>
-              <text>Set</text>
-              <x>202</x>
-              <y>67</y>
-              <width>80</width>
-              <height>70</height>
+              <pv_name>$(Sys)$(Dev)TsenSel</pv_name>
+              <text>Enable</text>
+              <x>11</x>
+              <y>26</y>
+              <width>120</width>
+              <height>50</height>
               <background_color>
                 <color red="240" green="240" blue="240">
                 </color>
               </background_color>
               <tooltip>$(actions)</tooltip>
             </widget>
-            <widget type="led" version="2.0.0">
-              <name>LED_7</name>
-              <pv_name>$(Sys)$(Dev)TSEN_PROC</pv_name>
-              <bit>0</bit>
-              <x>230</x>
-              <y>22</y>
-              <width>24</width>
-              <height>22</height>
-              <font>
-                <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
-                </font>
-              </font>
-              <foreground_color>
-                <color red="192" green="192" blue="192">
-                </color>
-              </foreground_color>
-              <line_color>
-                <color red="150" green="150" blue="150">
-                </color>
-              </line_color>
-              <square>true</square>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_20</name>
               <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>1</value>
+                </action>
               </actions>
-              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <pv_name>$(Sys)$(Dev)TsenAll</pv_name>
+              <text>Enable All</text>
+              <x>11</x>
+              <y>96</y>
+              <width>120</width>
+              <height>50</height>
+              <background_color>
+                <color red="240" green="240" blue="240">
+                </color>
+              </background_color>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_23</name>
+              <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>0</value>
+                </action>
+              </actions>
+              <pv_name>$(Sys)$(Dev)TsenSel</pv_name>
+              <text>Disable</text>
+              <x>171</x>
+              <y>26</y>
+              <width>120</width>
+              <height>50</height>
+              <background_color>
+                <color red="240" green="240" blue="240">
+                </color>
+              </background_color>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_24</name>
+              <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>0</value>
+                </action>
+              </actions>
+              <pv_name>$(Sys)$(Dev)TsenAll</pv_name>
+              <text>Disable All</text>
+              <x>171</x>
+              <y>96</y>
+              <width>120</width>
+              <height>50</height>
+              <background_color>
+                <color red="240" green="240" blue="240">
+                </color>
+              </background_color>
+              <tooltip>$(actions)</tooltip>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1243,74 +1256,88 @@ $(actions)</tooltip>
             <height>210</height>
             <transparent>true</transparent>
             <widget type="action_button" version="3.0.0">
-              <name>Action Button_14</name>
+              <name>Action Button_15</name>
               <actions>
                 <action type="write_pv">
                   <description>WritePV</description>
-                  <pv_name>$(Sys)$(Dev)CHEN_PROC</pv_name>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
                   <value>1</value>
                 </action>
               </actions>
-              <text>Set</text>
-              <x>202</x>
-              <y>72</y>
-              <width>80</width>
-              <height>70</height>
+              <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+              <text>Enable</text>
+              <x>11</x>
+              <y>23</y>
+              <width>120</width>
+              <height>50</height>
               <background_color>
                 <color red="240" green="240" blue="240">
                 </color>
               </background_color>
               <tooltip>$(actions)</tooltip>
             </widget>
-            <widget type="led" version="2.0.0">
-              <name>LED_8</name>
-              <pv_name>$(Sys)$(Dev)CHEN_PROC</pv_name>
-              <bit>0</bit>
-              <x>230</x>
-              <y>22</y>
-              <width>24</width>
-              <height>22</height>
-              <font>
-                <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
-                </font>
-              </font>
-              <foreground_color>
-                <color red="192" green="192" blue="192">
-                </color>
-              </foreground_color>
-              <line_color>
-                <color red="150" green="150" blue="150">
-                </color>
-              </line_color>
-              <square>true</square>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_16</name>
               <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>1</value>
+                </action>
               </actions>
-              <border_alarm_sensitive>false</border_alarm_sensitive>
-            </widget>
-            <widget type="choice" version="2.0.0">
-              <name>Choice Button_4</name>
-              <pv_name>$(Sys)$(Dev)CHEN_CTRL</pv_name>
-              <x>32</x>
-              <y>12</y>
+              <pv_name>$(Sys)$(Dev)ChenAll</pv_name>
+              <text>Enable All</text>
+              <x>11</x>
+              <y>93</y>
               <width>120</width>
-              <height>150</height>
+              <height>50</height>
               <background_color>
                 <color red="240" green="240" blue="240">
                 </color>
               </background_color>
-              <selected_color>
-                <color red="255" green="255" blue="255">
-                </color>
-              </selected_color>
-              <horizontal>false</horizontal>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_17</name>
               <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>0</value>
+                </action>
               </actions>
-              <items>
-                <item>Enable</item>
-                <item>Enable All</item>
-                <item>Disable</item>
-                <item>Disable All</item>
-              </items>
+              <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+              <text>Disable</text>
+              <x>171</x>
+              <y>23</y>
+              <width>120</width>
+              <height>50</height>
+              <background_color>
+                <color red="240" green="240" blue="240">
+                </color>
+              </background_color>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>Action Button_18</name>
+              <actions>
+                <action type="write_pv">
+                  <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)ChenSel</pv_name>
+                  <value>0</value>
+                </action>
+              </actions>
+              <pv_name>$(Sys)$(Dev)ChenAll</pv_name>
+              <text>Disable All</text>
+              <x>171</x>
+              <y>93</y>
+              <width>120</width>
+              <height>50</height>
+              <background_color>
+                <color red="240" green="240" blue="240">
+                </color>
+              </background_color>
+              <tooltip>$(actions)</tooltip>
             </widget>
           </widget>
           <widget type="xyplot" version="3.0.0">
@@ -1794,7 +1821,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_20</name>
-            <pv_name>$(Sys)$(Dev)TDS</pv_name>
+            <pv_name>$(Sys)$(Dev)TDCSlope</pv_name>
             <x>1039</x>
             <y>48</y>
             <width>160</width>
@@ -1829,7 +1856,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_28</name>
-            <pv_name>$(Sys)$(Dev)TPAMP</pv_name>
+            <pv_name>$(Sys)$(Dev)TestPulseAmplitude</pv_name>
             <x>1039</x>
             <y>248</y>
             <width>134</width>
@@ -1851,7 +1878,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_29</name>
-            <pv_name>$(Sys)$(Dev)TPFRQ</pv_name>
+            <pv_name>$(Sys)$(Dev)TestPulseFrequency</pv_name>
             <x>1039</x>
             <y>288</y>
             <width>134</width>
@@ -1911,7 +1938,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_21</name>
-            <pv_name>$(Sys)$(Dev)TDM</pv_name>
+            <pv_name>$(Sys)$(Dev)TDCMode</pv_name>
             <x>1039</x>
             <y>98</y>
             <width>160</width>
@@ -1946,7 +1973,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_30</name>
-            <pv_name>$(Sys)$(Dev)TPCNT</pv_name>
+            <pv_name>$(Sys)$(Dev)TestPulseCount</pv_name>
             <x>1039</x>
             <y>328</y>
             <width>134</width>
@@ -2025,7 +2052,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_22</name>
-            <pv_name>$(Sys)$(Dev)TPENB</pv_name>
+            <pv_name>$(Sys)$(Dev)TestPulseEnable</pv_name>
             <x>1039</x>
             <y>148</y>
             <width>160</width>
@@ -2041,7 +2068,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_23</name>
-            <pv_name>$(Sys)$(Dev)POL</pv_name>
+            <pv_name>$(Sys)$(Dev)Polarity</pv_name>
             <x>1039</x>
             <y>198</y>
             <width>160</width>
@@ -2076,7 +2103,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="spinner" version="2.0.0">
             <name>Spinner_7</name>
-            <pv_name>$(Sys)$(Dev)MONCH</pv_name>
+            <pv_name>$(Sys)$(Dev)MonitorChannel</pv_name>
             <x>1039</x>
             <y>368</y>
             <width>160</width>
@@ -2097,7 +2124,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_63</name>
-            <pv_name>$(Sys)$(Dev)MONCH_RBV</pv_name>
+            <pv_name>$(Sys)$(Dev)MonitorChannel</pv_name>
             <x>1039</x>
             <y>398</y>
             <width>134</width>
