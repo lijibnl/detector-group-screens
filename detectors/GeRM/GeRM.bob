@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-04-06 15:58:23 by liji-->
 <display version="2.0.0">
   <width>1300</width>
   <height>1150</height>
@@ -50,7 +51,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="image" version="2.0.0">
             <name>Spectra_2</name>
-            <pv_name>$(Sys)$(Dev).MCA</pv_name>
+            <pv_name>$(Sys)$(Dev)MCA</pv_name>
             <x>28</x>
             <y>16</y>
             <width>897</width>
@@ -107,11 +108,11 @@ $(pv_value)</tooltip>
             <unsigned>true</unsigned>
             <log_scale>true</log_scale>
             <maximum>2000.0</maximum>
-            <x_pv>$(Sys)$(Dev).CURSX</x_pv>
-            <y_pv>$(Sys)$(Dev).CURSY</y_pv>
+            <x_pv>$(Sys)$(Dev)CURSX</x_pv>
+            <y_pv>$(Sys)$(Dev)CURSY</y_pv>
             <cursor_crosshair>true</cursor_crosshair>
           </widget>
-          <widget type="xyplot" version="2.0.0">
+          <widget type="xyplot" version="3.0.0">
             <name>XY Graph_3</name>
             <x>519</x>
             <y>517</y>
@@ -119,7 +120,7 @@ $(pv_value)</tooltip>
               <color red="240" green="240" blue="240">
               </color>
             </background_color>
-            <title>$(Sys)$(Dev).INTENS</title>
+            <title>$(Sys)$(Dev)Intensity</title>
             <title_font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
@@ -161,14 +162,19 @@ $(pv_value)</tooltip>
                   <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
                   </font>
                 </scale_font>
+                <on_right>false</on_right>
                 <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
               </y_axis>
             </y_axes>
             <traces>
               <trace>
                 <name>$(traces[0].y_pv)</name>
                 <x_pv></x_pv>
-                <y_pv>$(Sys)$(Dev).INTENS</y_pv>
+                <y_pv>$(Sys)$(Dev)Intensity</y_pv>
                 <err_pv></err_pv>
                 <axis>0</axis>
                 <trace_type>1</trace_type>
@@ -184,7 +190,7 @@ $(pv_value)</tooltip>
               </trace>
             </traces>
           </widget>
-          <widget type="xyplot" version="2.0.0">
+          <widget type="xyplot" version="3.0.0">
             <name>XY Graph_4</name>
             <x>49</x>
             <y>517</y>
@@ -192,7 +198,7 @@ $(pv_value)</tooltip>
               <color red="240" green="240" blue="240">
               </color>
             </background_color>
-            <title>$(Sys)$(Dev).SPCT</title>
+            <title>$(Sys)$(Dev)Spectrum</title>
             <title_font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
@@ -234,14 +240,19 @@ $(pv_value)</tooltip>
                   <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
                   </font>
                 </scale_font>
+                <on_right>false</on_right>
                 <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
               </y_axis>
             </y_axes>
             <traces>
               <trace>
                 <name>$(traces[0].y_pv)</name>
-                <x_pv>$(Sys)$(Dev).SPCTX</x_pv>
-                <y_pv>$(Sys)$(Dev).SPCT</y_pv>
+                <x_pv>$(Sys)$(Dev)SPCTX</x_pv>
+                <y_pv>$(Sys)$(Dev)Spectrum</y_pv>
                 <err_pv></err_pv>
                 <axis>0</axis>
                 <trace_type>1</trace_type>
@@ -259,7 +270,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Gain_2</name>
-            <pv_name>$(Sys)$(Dev).GAIN</pv_name>
+            <pv_name>$(Sys)$(Dev)Gain</pv_name>
             <x>1087</x>
             <y>69</y>
             <width>110</width>
@@ -272,7 +283,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Shaping time_2</name>
-            <pv_name>$(Sys)$(Dev).SHPT</pv_name>
+            <pv_name>$(Sys)$(Dev)ShapingTime</pv_name>
             <x>1087</x>
             <y>134</y>
             <width>110</width>
@@ -314,7 +325,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_11</name>
-            <pv_name>$(Sys)$(Dev).MODE</pv_name>
+            <pv_name>$(Sys)$(Dev)MODE</pv_name>
             <x>1087</x>
             <y>199</y>
             <width>110</width>
@@ -327,7 +338,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_12</name>
-            <pv_name>$(Sys)$(Dev).CONT</pv_name>
+            <pv_name>$(Sys)$(Dev)CONT</pv_name>
             <x>1087</x>
             <y>264</y>
             <width>110</width>
@@ -386,7 +397,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Count time_2</name>
-            <pv_name>$(Sys)$(Dev).TP</pv_name>
+            <pv_name>$(Sys)$(Dev)AcquireTime</pv_name>
             <x>1084</x>
             <y>391</y>
             <width>110</width>
@@ -405,7 +416,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_36</name>
-            <pv_name>$(Sys)$(Dev):RUNNO_RBV</pv_name>
+            <pv_name>$(Sys)$(Dev)RUNNO_RBV</pv_name>
             <x>1084</x>
             <y>564</y>
             <width>110</width>
@@ -447,7 +458,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_6</name>
-            <pv_name>$(Sys)$(Dev).RUNNO</pv_name>
+            <pv_name>$(Sys)$(Dev)RUNNO</pv_name>
             <x>1084</x>
             <y>539</y>
             <width>110</width>
@@ -482,7 +493,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Auto time_2</name>
-            <pv_name>$(Sys)$(Dev).TP1</pv_name>
+            <pv_name>$(Sys)$(Dev)TP1</pv_name>
             <x>1084</x>
             <y>499</y>
             <width>110</width>
@@ -501,7 +512,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="progressbar" version="2.0.0">
             <name>Couting Progress</name>
-            <pv_name>$(Sys)$(Dev):TIME_ELAPSED</pv_name>
+            <pv_name>$(Sys)$(Dev)TIME_ELAPSED</pv_name>
             <x>989</x>
             <y>448</y>
             <width>200</width>
@@ -511,14 +522,14 @@ $(pv_value)</tooltip>
                 <exp bool_exp="true">
                   <expression>pv0</expression>
                 </exp>
-                <pv_name>$(Sys)$(Dev).TP</pv_name>
+                <pv_name>$(Sys)$(Dev)TP</pv_name>
               </rule>
             </rules>
             <limits_from_pv>false</limits_from_pv>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_33</name>
-            <pv_name>$(Sys)$(Dev):TIME_LEFT</pv_name>
+            <pv_name>$(Sys)$(Dev)TIME_LEFT</pv_name>
             <x>1085</x>
             <y>418</y>
             <width>110</width>
@@ -549,7 +560,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_13</name>
-            <pv_name>$(Sys)$(Dev).GMON</pv_name>
+            <pv_name>$(Sys)$(Dev)GMON</pv_name>
             <x>1087</x>
             <y>673</y>
             <width>110</width>
@@ -578,7 +589,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="spinner" version="2.0.0">
             <name>Spinner_5</name>
-            <pv_name>$(Sys)$(Dev).MONCH</pv_name>
+            <pv_name>$(Sys)$(Dev)MONCH</pv_name>
             <x>1087</x>
             <y>731</y>
             <width>110</width>
@@ -610,7 +621,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_47</name>
-            <pv_name>='$(Sys)$(Dev):TIME_ELAPSED'/'$(Sys)$(Dev).TP'*100</pv_name>
+            <pv_name>='$(Sys)$(Dev)TIME_ELAPSED'/'$(Sys)$(Dev)TP'*100</pv_name>
             <x>1058</x>
             <y>457</y>
             <width>40</width>
@@ -633,7 +644,7 @@ $(pv_value)</tooltip>
         <children>
           <widget type="textentry" version="3.0.0">
             <name>Text Input</name>
-            <pv_name>$(Sys)$(Dev).CALF</pv_name>
+            <pv_name>$(Sys)$(Dev)CALF</pv_name>
             <x>938</x>
             <y>44</y>
             <width>270</width>
@@ -654,8 +665,8 @@ $(pv_value)</tooltip>
             <name>Action Button</name>
             <actions>
               <action type="command">
-                <command>/home/peter/css_scripts/testEnable/bin/linux-x86_64//./loadcals</command>
                 <description>Execute Command</description>
+                <command>/home/peter/css_scripts/testEnable/bin/linux-x86_64//./loadcals</command>
               </action>
             </actions>
             <text>Load</text>
@@ -685,7 +696,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button</name>
-            <pv_name>$(Sys)$(Dev).MFS</pv_name>
+            <pv_name>$(Sys)$(Dev)MultiFire</pv_name>
             <x>1108</x>
             <y>86</y>
             <height>35</height>
@@ -697,7 +708,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_1</name>
-            <pv_name>$(Sys)$(Dev).LOAO</pv_name>
+            <pv_name>$(Sys)$(Dev)LOAO</pv_name>
             <x>1108</x>
             <y>131</y>
             <height>35</height>
@@ -739,7 +750,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_2</name>
-            <pv_name>$(Sys)$(Dev).EBLK</pv_name>
+            <pv_name>$(Sys)$(Dev)EBLK</pv_name>
             <x>1108</x>
             <y>176</y>
             <height>35</height>
@@ -751,7 +762,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_3</name>
-            <pv_name>$(Sys)$(Dev).PUEN</pv_name>
+            <pv_name>$(Sys)$(Dev)PileupReject</pv_name>
             <x>1108</x>
             <y>221</y>
             <height>35</height>
@@ -794,7 +805,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="array" version="2.0.0">
             <name>Array_6</name>
-            <pv_name>$(Sys)$(Dev).THRSH</pv_name>
+            <pv_name>$(Sys)$(Dev)THRSH</pv_name>
             <x>1059</x>
             <y>419</y>
             <width>130</width>
@@ -807,7 +818,7 @@ $(pv_value)</tooltip>
                 <exp bool_exp="pv0==384">
                   <value>380</value>
                 </exp>
-                <pv_name>$(Sys)$(Dev).NELM</pv_name>
+                <pv_name>$(Sys)$(Dev)NELM</pv_name>
               </rule>
             </rules>
             <widget type="textentry" version="3.0.0">
@@ -836,7 +847,7 @@ $(pv_value)</tooltip>
               </color>
             </border_color>
           </widget>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>HV Bias</name>
             <x>929</x>
             <y>279</y>
@@ -860,7 +871,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_11</name>
-              <pv_name>$(Sys)$(Dev):HV</pv_name>
+              <pv_name>$(Sys)$(Dev)HV</pv_name>
               <x>85</x>
               <y>7</y>
               <width>140</width>
@@ -879,7 +890,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_11</name>
-              <pv_name>$(Sys)$(Dev):HV_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)HV_RBV</pv_name>
               <x>85</x>
               <y>32</y>
               <width>140</width>
@@ -900,7 +911,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_12</name>
-              <pv_name>$(Sys)$(Dev):HV_CUR</pv_name>
+              <pv_name>$(Sys)$(Dev)HV_CUR</pv_name>
               <x>85</x>
               <y>63</y>
               <width>140</width>
@@ -936,7 +947,7 @@ $(pv_value)</tooltip>
           </widget>
           <widget type="image" version="2.0.0">
             <name>Spectra_4</name>
-            <pv_name>$(Sys)$(Dev).MCA</pv_name>
+            <pv_name>$(Sys)$(Dev)MCA</pv_name>
             <x>30</x>
             <y>26</y>
             <width>877</width>
@@ -992,13 +1003,13 @@ $(pv_value)</tooltip>
             <unsigned>true</unsigned>
             <log_scale>true</log_scale>
             <maximum>2000.0</maximum>
-            <x_pv>$(Sys)$(Dev).CURSX</x_pv>
-            <y_pv>$(Sys)$(Dev).CURSY</y_pv>
+            <x_pv>$(Sys)$(Dev)CURSX</x_pv>
+            <y_pv>$(Sys)$(Dev)CURSY</y_pv>
             <cursor_crosshair>true</cursor_crosshair>
           </widget>
           <widget type="image" version="2.0.0">
             <name>Time spectra</name>
-            <pv_name>$(Sys)$(Dev).TDC</pv_name>
+            <pv_name>$(Sys)$(Dev)TDC</pv_name>
             <x>30</x>
             <y>429</y>
             <width>877</width>
@@ -1060,7 +1071,7 @@ $(pv_value)</tooltip>
       <tab>
         <name>Test &amp; UDP</name>
         <children>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>UDP</name>
             <x>528</x>
             <y>516</y>
@@ -1084,7 +1095,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_59</name>
-              <pv_name>$(Sys)$(Dev):IPADDR_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)IPAddress_RBV</pv_name>
               <x>155</x>
               <y>33</y>
               <width>134</width>
@@ -1110,7 +1121,7 @@ $(pv_value)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_20</name>
-              <pv_name>$(Sys)$(Dev).IPADDR</pv_name>
+              <pv_name>$(Sys)$(Dev)IPAddress</pv_name>
               <x>158</x>
               <y>8</y>
               <width>134</width>
@@ -1146,7 +1157,7 @@ $(pv_value)</tooltip>
 $(pv_value)
 $(actions)</tooltip>
           </widget>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>Test Pulses</name>
             <x>530</x>
             <y>30</y>
@@ -1155,7 +1166,7 @@ $(actions)</tooltip>
             <transparent>true</transparent>
             <widget type="choice" version="2.0.0">
               <name>Choice Button_2</name>
-              <pv_name>$(Sys)$(Dev):TSEN_CTRL</pv_name>
+              <pv_name>$(Sys)$(Dev)TSEN_CTRL</pv_name>
               <x>32</x>
               <y>12</y>
               <width>120</width>
@@ -1182,9 +1193,9 @@ $(actions)</tooltip>
               <name>Action Button_13</name>
               <actions>
                 <action type="write_pv">
-                  <pv_name>$(Sys)$(Dev):TSEN_PROC</pv_name>
-                  <value>1</value>
                   <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)TSEN_PROC</pv_name>
+                  <value>1</value>
                 </action>
               </actions>
               <text>Set</text>
@@ -1200,7 +1211,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="led" version="2.0.0">
               <name>LED_7</name>
-              <pv_name>$(Sys)$(Dev):TSEN_PROC</pv_name>
+              <pv_name>$(Sys)$(Dev)TSEN_PROC</pv_name>
               <bit>0</bit>
               <x>230</x>
               <y>22</y>
@@ -1224,7 +1235,7 @@ $(actions)</tooltip>
               <border_alarm_sensitive>false</border_alarm_sensitive>
             </widget>
           </widget>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>Channels</name>
             <x>530</x>
             <y>273</y>
@@ -1235,9 +1246,9 @@ $(actions)</tooltip>
               <name>Action Button_14</name>
               <actions>
                 <action type="write_pv">
-                  <pv_name>$(Sys)$(Dev):CHEN_PROC</pv_name>
-                  <value>1</value>
                   <description>WritePV</description>
+                  <pv_name>$(Sys)$(Dev)CHEN_PROC</pv_name>
+                  <value>1</value>
                 </action>
               </actions>
               <text>Set</text>
@@ -1253,7 +1264,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="led" version="2.0.0">
               <name>LED_8</name>
-              <pv_name>$(Sys)$(Dev):CHEN_PROC</pv_name>
+              <pv_name>$(Sys)$(Dev)CHEN_PROC</pv_name>
               <bit>0</bit>
               <x>230</x>
               <y>22</y>
@@ -1278,7 +1289,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="choice" version="2.0.0">
               <name>Choice Button_4</name>
-              <pv_name>$(Sys)$(Dev):CHEN_CTRL</pv_name>
+              <pv_name>$(Sys)$(Dev)CHEN_CTRL</pv_name>
               <x>32</x>
               <y>12</y>
               <width>120</width>
@@ -1302,8 +1313,8 @@ $(actions)</tooltip>
               </items>
             </widget>
           </widget>
-          <widget type="xyplot" version="2.0.0">
-            <name>SPCT</name>
+          <widget type="xyplot" version="3.0.0">
+            <name>Spectrum</name>
             <x>19</x>
             <y>50</y>
             <width>487</width>
@@ -1312,7 +1323,7 @@ $(actions)</tooltip>
               <color red="240" green="240" blue="240">
               </color>
             </background_color>
-            <title>SPCT</title>
+            <title>Spectrum</title>
             <title_font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
@@ -1354,14 +1365,19 @@ $(actions)</tooltip>
                   <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
                   </font>
                 </scale_font>
+                <on_right>false</on_right>
                 <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
               </y_axis>
             </y_axes>
             <traces>
               <trace>
                 <name>$(traces[0].y_pv)</name>
-                <x_pv>$(Sys)$(Dev).SPCTX</x_pv>
-                <y_pv>$(Sys)$(Dev).SPCT</y_pv>
+                <x_pv>$(Sys)$(Dev)SPCTX</x_pv>
+                <y_pv>$(Sys)$(Dev)Spectrum</y_pv>
                 <err_pv></err_pv>
                 <axis>0</axis>
                 <trace_type>1</trace_type>
@@ -1377,7 +1393,7 @@ $(actions)</tooltip>
               </trace>
             </traces>
           </widget>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>File Writer</name>
             <x>529</x>
             <y>635</y>
@@ -1401,7 +1417,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_9</name>
-              <pv_name>$(Sys)$(Dev).IPADDR</pv_name>
+              <pv_name>$(Sys)$(Dev)IPADDR</pv_name>
               <x>130</x>
               <y>12</y>
               <width>140</width>
@@ -1420,7 +1436,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_35</name>
-              <pv_name>$(Sys)$(Dev):IPADDR_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)IPADDR_RBV</pv_name>
               <x>270</x>
               <y>12</y>
               <width>140</width>
@@ -1462,7 +1478,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_7</name>
-              <pv_name>$(Sys)$(Dev):FSIZ</pv_name>
+              <pv_name>$(Sys)$(Dev)FileSize</pv_name>
               <x>481</x>
               <y>12</y>
               <height>25</height>
@@ -1480,7 +1496,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_30</name>
-              <pv_name>$(Sys)$(Dev):FSIZ_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)Filesize</pv_name>
               <x>581</x>
               <y>12</y>
               <height>25</height>
@@ -1520,7 +1536,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_8</name>
-              <pv_name>$(Sys)$(Dev).FNAM</pv_name>
+              <pv_name>$(Sys)$(Dev)FileName</pv_name>
               <x>131</x>
               <y>52</y>
               <width>540</width>
@@ -1539,7 +1555,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_32</name>
-              <pv_name>$(Sys)$(Dev):FNAM_RBV</pv_name>
+              <pv_name>$(Sys)$(Dev)FNAM_RBV</pv_name>
               <x>131</x>
               <y>82</y>
               <width>540</width>
@@ -1564,7 +1580,7 @@ $(actions)</tooltip>
               </border_color>
             </widget>
           </widget>
-          <widget type="group" version="2.0.0">
+          <widget type="group" version="3.0.0">
             <name>UDP Daemon</name>
             <x>861</x>
             <y>457</y>
@@ -1573,7 +1589,7 @@ $(actions)</tooltip>
             <transparent>true</transparent>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_50</name>
-              <pv_name>$(Sys)$(Dev):HOSTNAME</pv_name>
+              <pv_name>$(Sys)$(Dev)HOSTNAME</pv_name>
               <x>72</x>
               <y>77</y>
               <width>250</width>
@@ -1598,7 +1614,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_51</name>
-              <pv_name>$(Sys)$(Dev):DIR</pv_name>
+              <pv_name>$(Sys)$(Dev)DIR</pv_name>
               <x>72</x>
               <y>102</y>
               <width>250</width>
@@ -1655,7 +1671,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textupdate" version="2.0.0">
               <name>Text Update_52</name>
-              <pv_name>$(Sys)$(Dev):PID</pv_name>
+              <pv_name>$(Sys)$(Dev)PID</pv_name>
               <x>220</x>
               <y>37</y>
               <height>25</height>
@@ -1712,7 +1728,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="led" version="2.0.0">
               <name>LED_4</name>
-              <pv_name>$(Sys)$(Dev):ONLINE</pv_name>
+              <pv_name>$(Sys)$(Dev)ONLINE</pv_name>
               <bit>0</bit>
               <x>21</x>
               <y>37</y>
@@ -1758,7 +1774,7 @@ $(actions)</tooltip>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Text Input_13</name>
-              <pv_name>$(Sys)$(Dev):TOLERANCE</pv_name>
+              <pv_name>$(Sys)$(Dev)TOLERANCE</pv_name>
               <x>95</x>
               <y>37</y>
               <width>106</width>
@@ -1778,7 +1794,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_20</name>
-            <pv_name>$(Sys)$(Dev).TDS</pv_name>
+            <pv_name>$(Sys)$(Dev)TDS</pv_name>
             <x>1039</x>
             <y>48</y>
             <width>160</width>
@@ -1813,7 +1829,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_28</name>
-            <pv_name>$(Sys)$(Dev).TPAMP</pv_name>
+            <pv_name>$(Sys)$(Dev)TPAMP</pv_name>
             <x>1039</x>
             <y>248</y>
             <width>134</width>
@@ -1835,7 +1851,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_29</name>
-            <pv_name>$(Sys)$(Dev).TPFRQ</pv_name>
+            <pv_name>$(Sys)$(Dev)TPFRQ</pv_name>
             <x>1039</x>
             <y>288</y>
             <width>134</width>
@@ -1895,7 +1911,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_21</name>
-            <pv_name>$(Sys)$(Dev).TDM</pv_name>
+            <pv_name>$(Sys)$(Dev)TDM</pv_name>
             <x>1039</x>
             <y>98</y>
             <width>160</width>
@@ -1930,7 +1946,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textentry" version="3.0.0">
             <name>Text Input_30</name>
-            <pv_name>$(Sys)$(Dev).TPCNT</pv_name>
+            <pv_name>$(Sys)$(Dev)TPCNT</pv_name>
             <x>1039</x>
             <y>328</y>
             <width>134</width>
@@ -2009,7 +2025,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_22</name>
-            <pv_name>$(Sys)$(Dev).TPENB</pv_name>
+            <pv_name>$(Sys)$(Dev)TPENB</pv_name>
             <x>1039</x>
             <y>148</y>
             <width>160</width>
@@ -2025,7 +2041,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="combo" version="2.0.0">
             <name>Menu Button_23</name>
-            <pv_name>$(Sys)$(Dev).POL</pv_name>
+            <pv_name>$(Sys)$(Dev)POL</pv_name>
             <x>1039</x>
             <y>198</y>
             <width>160</width>
@@ -2060,7 +2076,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="spinner" version="2.0.0">
             <name>Spinner_7</name>
-            <pv_name>$(Sys)$(Dev).MONCH</pv_name>
+            <pv_name>$(Sys)$(Dev)MONCH</pv_name>
             <x>1039</x>
             <y>368</y>
             <width>160</width>
@@ -2081,7 +2097,7 @@ $(actions)</tooltip>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Text Update_63</name>
-            <pv_name>$(Sys)$(Dev):MONCH_RBV</pv_name>
+            <pv_name>$(Sys)$(Dev)MONCH_RBV</pv_name>
             <x>1039</x>
             <y>398</y>
             <width>134</width>
@@ -2115,7 +2131,7 @@ $(actions)</tooltip>
         <children>
           <widget type="image" version="2.0.0">
             <name>Spectra_3</name>
-            <pv_name>$(Sys)$(Dev).MCA</pv_name>
+            <pv_name>$(Sys)$(Dev)MCA</pv_name>
             <x>28</x>
             <y>26</y>
             <width>800</width>
@@ -2172,13 +2188,13 @@ $(actions)</tooltip>
             <unsigned>true</unsigned>
             <log_scale>true</log_scale>
             <maximum>2000.0</maximum>
-            <x_pv>$(Sys)$(Dev).CURSX</x_pv>
-            <y_pv>$(Sys)$(Dev).CURSY</y_pv>
+            <x_pv>$(Sys)$(Dev)CURSX</x_pv>
+            <y_pv>$(Sys)$(Dev)CURSY</y_pv>
             <cursor_crosshair>true</cursor_crosshair>
           </widget>
           <widget type="image" version="2.0.0">
             <name>Time spectra_1</name>
-            <pv_name>$(Sys)$(Dev).TDC</pv_name>
+            <pv_name>$(Sys)$(Dev)TDC</pv_name>
             <x>28</x>
             <y>425</y>
             <width>800</width>
@@ -2235,7 +2251,7 @@ $(actions)</tooltip>
             <log_scale>true</log_scale>
             <maximum>500000.0</maximum>
           </widget>
-          <widget type="xyplot" version="2.0.0">
+          <widget type="xyplot" version="3.0.0">
             <name>XY Graph_5</name>
             <x>848</x>
             <y>26</y>
@@ -2244,7 +2260,7 @@ $(actions)</tooltip>
               <color red="240" green="240" blue="240">
               </color>
             </background_color>
-            <title>$(Sys)$(Dev).SPCT</title>
+            <title>$(Sys)$(Dev)Spectrum</title>
             <title_font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
@@ -2286,14 +2302,19 @@ $(actions)</tooltip>
                   <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
                   </font>
                 </scale_font>
+                <on_right>false</on_right>
                 <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
               </y_axis>
             </y_axes>
             <traces>
               <trace>
                 <name>$(traces[0].y_pv)</name>
-                <x_pv>$(Sys)$(Dev).SPCTX</x_pv>
-                <y_pv>$(Sys)$(Dev).SPCT</y_pv>
+                <x_pv>$(Sys)$(Dev)SPCTX</x_pv>
+                <y_pv>$(Sys)$(Dev)Spectrum</y_pv>
                 <err_pv></err_pv>
                 <axis>0</axis>
                 <trace_type>1</trace_type>
@@ -2309,7 +2330,7 @@ $(actions)</tooltip>
               </trace>
             </traces>
           </widget>
-          <widget type="xyplot" version="2.0.0">
+          <widget type="xyplot" version="3.0.0">
             <name>XY Graph_6</name>
             <x>848</x>
             <y>425</y>
@@ -2318,7 +2339,7 @@ $(actions)</tooltip>
               <color red="240" green="240" blue="240">
               </color>
             </background_color>
-            <title>$(Sys)$(Dev).INTENS</title>
+            <title>$(Sys)$(Dev)Intensity</title>
             <title_font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
@@ -2360,14 +2381,19 @@ $(actions)</tooltip>
                   <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
                   </font>
                 </scale_font>
+                <on_right>false</on_right>
                 <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
               </y_axis>
             </y_axes>
             <traces>
               <trace>
                 <name>$(traces[0].y_pv)</name>
                 <x_pv></x_pv>
-                <y_pv>$(Sys)$(Dev).INTENS</y_pv>
+                <y_pv>$(Sys)$(Dev)Intensity</y_pv>
                 <err_pv></err_pv>
                 <axis>0</axis>
                 <trace_type>1</trace_type>
@@ -2394,7 +2420,7 @@ $(actions)</tooltip>
       <color red="240" green="240" blue="240">
       </color>
     </background_color>
-    <active_tab>3</active_tab>
+    <active_tab>2</active_tab>
     <tab_height>10</tab_height>
     <actions>
     </actions>
@@ -2421,7 +2447,7 @@ $(actions)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_49</name>
-    <pv_name>$(Sys)$(Dev).NELM</pv_name>
+    <pv_name>$(Sys)$(Dev)NumElements</pv_name>
     <x>1121</x>
     <y>17</y>
     <width>145</width>
@@ -2449,7 +2475,7 @@ $(actions)</tooltip>
       </color>
     </border_color>
   </widget>
-  <widget type="group" version="2.0.0">
+  <widget type="group" version="3.0.0">
     <name>STATUS</name>
     <x>22</x>
     <y>943</y>
@@ -2517,7 +2543,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_42</name>
-      <pv_name>$(Sys)$(Dev):Temp1</pv_name>
+      <pv_name>$(Sys)$(Dev)Temperature1</pv_name>
       <x>43</x>
       <y>65</y>
       <height>25</height>
@@ -2542,7 +2568,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_43</name>
-      <pv_name>$(Sys)$(Dev):Temp2</pv_name>
+      <pv_name>$(Sys)$(Dev)Temperature2</pv_name>
       <x>172</x>
       <y>65</y>
       <height>25</height>
@@ -2567,7 +2593,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_44</name>
-      <pv_name>$(Sys)$(Dev):Temp3</pv_name>
+      <pv_name>$(Sys)$(Dev)Temperature3</pv_name>
       <x>302</x>
       <y>65</y>
       <height>25</height>
@@ -2592,7 +2618,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_45</name>
-      <pv_name>$(Sys)$(Dev):ztmp</pv_name>
+      <pv_name>$(Sys)$(Dev)ztmp</pv_name>
       <x>422</x>
       <y>65</y>
       <height>25</height>
@@ -2634,7 +2660,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_46</name>
-      <pv_name>$(Sys)$(Dev):HV_RBV</pv_name>
+      <pv_name>$(Sys)$(Dev)HV_RBV</pv_name>
       <x>551</x>
       <y>65</y>
       <height>25</height>
@@ -2675,7 +2701,7 @@ $(actions)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_48</name>
-      <pv_name>$(Sys)$(Dev):HV_CUR</pv_name>
+      <pv_name>$(Sys)$(Dev)HV_CUR</pv_name>
       <x>671</x>
       <y>65</y>
       <width>120</width>
@@ -2748,7 +2774,7 @@ $(actions)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_5</name>
-    <pv_name>$(Sys)$(Dev):ONLINE</pv_name>
+    <pv_name>$(Sys)$(Dev)ONLINE</pv_name>
     <bit>0</bit>
     <x>887</x>
     <y>1026</y>
@@ -2799,12 +2825,12 @@ $(actions)</tooltip>
     <name>Action Button_21</name>
     <actions execute_as_one="true">
       <action type="write_pv">
-        <pv_name>$(Sys)$(Dev).CNT</pv_name>
-        <value>0</value>
         <description>WritePV</description>
+        <pv_name>$(Sys)$(Dev)Acquire</pv_name>
+        <value>0</value>
       </action>
     </actions>
-    <pv_name>$(Sys)$(Dev).CNT</pv_name>
+    <pv_name>$(Sys)$(Dev)Acquire</pv_name>
     <text>STOP</text>
     <x>1045</x>
     <y>970</y>
@@ -2822,7 +2848,7 @@ $(actions)</tooltip>
         <exp bool_exp="pv0==0">
           <value>false</value>
         </exp>
-        <pv_name>$(Sys)$(Dev).CNT</pv_name>
+        <pv_name>$(Sys)$(Dev)Acquire</pv_name>
       </rule>
     </rules>
   </widget>
@@ -2830,12 +2856,12 @@ $(actions)</tooltip>
     <name>Action Button_22</name>
     <actions execute_as_one="true">
       <action type="write_pv">
-        <pv_name>$(Sys)$(Dev).CNT</pv_name>
-        <value>Count</value>
         <description>WritePV</description>
+        <pv_name>$(Sys)$(Dev)Acquire</pv_name>
+        <value>1</value>
       </action>
     </actions>
-    <pv_name>$(Sys)$(Dev).CNT</pv_name>
+    <pv_name>$(Sys)$(Dev)Acquire</pv_name>
     <text>COUNT</text>
     <x>1045</x>
     <y>970</y>
@@ -2853,7 +2879,7 @@ $(actions)</tooltip>
         <exp bool_exp="pv0==0">
           <value>true</value>
         </exp>
-        <pv_name>$(Sys)$(Dev).CNT</pv_name>
+        <pv_name>$(Sys)$(Dev)Acquire</pv_name>
       </rule>
     </rules>
   </widget>
